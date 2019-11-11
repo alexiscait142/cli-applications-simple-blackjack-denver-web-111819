@@ -64,6 +64,13 @@ def runner
   # code runner here
   welcome 
   initial_round
-  
+  hit?(total)
+  display_card_total(total)
+  prompt_user
+  user_input = get_user_input
+  if user_input == 's'
+    prompt_user
+  else total += deal_card
+  end
 end
     
